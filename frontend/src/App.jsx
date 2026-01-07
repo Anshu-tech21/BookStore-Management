@@ -1,14 +1,22 @@
-import BookForm from "./components/BookForm";
-import BookList from "./components/BookList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Admin from "./components/Admin";
+import UserLogin from "./components/UserLogin";
+import User from "./components/User";
 
 function App() {
   return (
-    <div className="container">
-      <h1>📚 Bookstore Management</h1>
-      <BookForm refresh={() => window.location.reload()} />
-      <BookList />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/user-login" element={<UserLogin />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/user" element={<User />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;

@@ -38,7 +38,7 @@ function BookForm({ refresh }) {
   };
 
   return (
-    <form className="Form"onSubmit={submit}>
+    <form className="book-form"onSubmit={submit}>
       <h2>Add Book</h2>
 
       <input
@@ -65,7 +65,7 @@ function BookForm({ refresh }) {
         onChange={handleImage}
       /><br></br>
 
-      <button className="ADD">Add</button>
+      <button>Add</button>
     </form>
   );
 }
